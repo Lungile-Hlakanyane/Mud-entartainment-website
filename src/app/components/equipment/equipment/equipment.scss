@@ -1,0 +1,1084 @@
+/* =========================================================
+   EQUIPMENT SECTION
+========================================================= */
+
+.equipment {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  background: #080808;
+
+  color: #ffffff;
+
+  padding: 140px 0 120px;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.equipment__container {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  padding: 0 40px;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   DECORATIVE GLOWS
+========================================================= */
+
+.equipment__glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(140px);
+
+  opacity: 0.04;
+}
+
+.equipment__glow--one {
+  width: 600px;
+  height: 600px;
+
+  top: 10%;
+  right: -350px;
+
+  background: #ffffff;
+}
+
+.equipment__glow--two {
+  width: 450px;
+  height: 450px;
+
+  top: 60%;
+  left: -300px;
+
+  background: #ffffff;
+
+  opacity: 0.025;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.equipment__header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 70px;
+}
+
+
+/* Eyebrow */
+
+.equipment__eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  color: rgba(255, 255, 255, 0.45);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+}
+
+.equipment__eyebrow-number {
+  color: #ffffff;
+
+  font-size: 9px;
+}
+
+.equipment__eyebrow-line {
+  width: 40px;
+
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+
+.equipment__header-label {
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.equipment__intro {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.5fr);
+
+  gap: 80px;
+
+  align-items: end;
+
+  margin-bottom: 90px;
+}
+
+
+.equipment__title {
+  margin: 0;
+
+  font-size: clamp(65px, 8vw, 125px);
+
+  line-height: 0.84;
+
+  font-weight: 900;
+
+  letter-spacing: -0.06em;
+
+  text-transform: uppercase;
+}
+
+.equipment__title span {
+  display: block;
+}
+
+.equipment__title-outline {
+  color: transparent;
+
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.8);
+}
+
+
+/* Intro content */
+
+.equipment__intro-content {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 35px;
+}
+
+.equipment__intro-content > p {
+  max-width: 430px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   INTRO META
+========================================================= */
+
+.equipment__intro-meta {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.equipment__intro-meta > div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.equipment__intro-meta strong {
+  font-size: 45px;
+
+  line-height: 1;
+
+  font-weight: 800;
+
+  letter-spacing: -0.05em;
+}
+
+.equipment__intro-meta span {
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.15em;
+}
+
+
+/* =========================================================
+   EQUIPMENT LIST
+========================================================= */
+
+.equipment__list {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 2px;
+
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+/* =========================================================
+   EQUIPMENT CARD
+========================================================= */
+
+.equipment-card {
+  position: relative;
+
+  min-height: 360px;
+
+  padding: 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  overflow: hidden;
+
+  background: #0a0a0a;
+
+  cursor: pointer;
+
+  transition:
+    background 0.4s ease;
+}
+
+.equipment-card:hover {
+  background: #111111;
+}
+
+
+/* =========================================================
+   LARGE NUMBER
+========================================================= */
+
+.equipment-card::before {
+  content: '';
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  right: -100px;
+  bottom: -100px;
+
+  border: 1px solid rgba(255, 255, 255, 0.04);
+
+  border-radius: 50%;
+
+  transition:
+    transform 0.7s ease,
+    border-color 0.5s ease;
+}
+
+.equipment-card:hover::before {
+  transform: scale(1.5);
+
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
+.equipment-card__number {
+  position: relative;
+
+  z-index: 3;
+
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+
+  place-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 50%;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.equipment-card:hover .equipment-card__number {
+  background: #ffffff;
+
+  color: #080808;
+}
+
+
+/* =========================================================
+   CARD MAIN
+========================================================= */
+
+.equipment-card__main {
+  position: relative;
+
+  z-index: 2;
+}
+
+.equipment-card__category {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: rgba(255, 255, 255, 0.28);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+.equipment-card__main h3 {
+  margin: 0;
+
+  max-width: 600px;
+
+  font-size: clamp(38px, 4vw, 60px);
+
+  line-height: 0.88;
+
+  font-weight: 800;
+
+  letter-spacing: -0.055em;
+
+  text-transform: uppercase;
+}
+
+.equipment-card__main h3 span {
+  display: block;
+
+  color: rgba(255, 255, 255, 0.35);
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.equipment-card__details {
+  position: absolute;
+
+  z-index: 5;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 30px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(17, 17, 17, 0.9),
+      #111111 35%
+    );
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+  transform: translateY(100%);
+
+  opacity: 0;
+
+  transition:
+    transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1),
+    opacity 0.35s ease;
+}
+
+.equipment-card:hover .equipment-card__details {
+  transform: translateY(0);
+
+  opacity: 1;
+}
+
+
+/* Details header */
+
+.equipment-card__detail-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+
+  color: rgba(255, 255, 255, 0.28);
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+.equipment-card__details p {
+  max-width: 520px;
+
+  margin: 0 0 22px;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.equipment-card__price {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 15px 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.equipment-card__price span {
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+.equipment-card__price strong {
+  color: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   AVAILABILITY
+========================================================= */
+
+.equipment-card__availability {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 15px;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+.equipment-card__availability::before {
+  content: '';
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.equipment-card__arrow {
+  position: absolute;
+
+  z-index: 6;
+
+  top: 30px;
+  right: 30px;
+
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+
+  place-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 50%;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 16px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.equipment-card:hover .equipment-card__arrow {
+  background: #ffffff;
+
+  color: #080808;
+
+  transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   INSTRUCTION
+========================================================= */
+
+.equipment__instruction {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 25px;
+
+  color: rgba(255, 255, 255, 0.25);
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.17em;
+
+  text-align: center;
+}
+
+.equipment__instruction-icon {
+  width: 22px;
+  height: 22px;
+
+  display: grid;
+
+  place-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  border-radius: 50%;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.equipment__cta {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 40px;
+
+  margin-top: 90px;
+
+  padding: 55px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.01)
+    );
+}
+
+.equipment__cta-content > span {
+  display: block;
+
+  margin-bottom: 13px;
+
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+}
+
+.equipment__cta-content h3 {
+  margin: 0;
+
+  font-size: clamp(40px, 5vw, 72px);
+
+  line-height: 0.88;
+
+  font-weight: 800;
+
+  letter-spacing: -0.055em;
+}
+
+.equipment__cta-content h3 span {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+
+/* =========================================================
+   CTA BUTTON
+========================================================= */
+
+.equipment__cta-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  flex-shrink: 0;
+
+  padding: 9px 9px 9px 24px;
+
+  border-radius: 100px;
+
+  background: #ffffff;
+
+  color: #111111;
+
+  text-decoration: none;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.equipment__cta-button:hover {
+  transform: translateY(-3px);
+
+  background: #eeeeee;
+}
+
+.equipment__cta-arrow {
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #111111;
+
+  color: #ffffff;
+
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .equipment__container {
+    padding: 0 28px;
+  }
+
+  .equipment__intro {
+    gap: 45px;
+  }
+
+  .equipment-card {
+    min-height: 340px;
+
+    padding: 25px;
+  }
+
+  .equipment-card__main h3 {
+    font-size: 43px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .equipment {
+    padding: 100px 0;
+  }
+
+  .equipment__intro {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .equipment__list {
+    grid-template-columns: 1fr;
+  }
+
+  .equipment-card {
+    min-height: 400px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .equipment {
+    padding: 80px 0 70px;
+  }
+
+  .equipment__container {
+    padding: 0 20px;
+  }
+
+
+  /* Header */
+
+  .equipment__header {
+    margin-bottom: 55px;
+  }
+
+  .equipment__eyebrow {
+    gap: 9px;
+
+    font-size: 8px;
+  }
+
+  .equipment__eyebrow-line {
+    width: 25px;
+  }
+
+  .equipment__header-label {
+    display: none;
+  }
+
+
+  /* Intro */
+
+  .equipment__intro {
+    gap: 25px;
+
+    margin-bottom: 60px;
+  }
+
+  .equipment__title {
+    font-size: clamp(48px, 13vw, 70px);
+
+    line-height: 0.87;
+  }
+
+  .equipment__title-outline {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.8);
+  }
+
+  .equipment__intro-content {
+    gap: 25px;
+  }
+
+  .equipment__intro-content > p {
+    font-size: 11px;
+
+    line-height: 1.75;
+  }
+
+  .equipment__intro-meta {
+    gap: 15px;
+  }
+
+  .equipment__intro-meta strong {
+    font-size: 38px;
+  }
+
+
+  /* Cards */
+
+  .equipment__list {
+    gap: 1px;
+  }
+
+  .equipment-card {
+    min-height: 400px;
+
+    padding: 22px;
+  }
+
+  .equipment-card__number {
+    width: 34px;
+    height: 34px;
+
+    font-size: 8px;
+  }
+
+  .equipment-card__arrow {
+    top: 22px;
+    right: 22px;
+
+    width: 34px;
+    height: 34px;
+  }
+
+  .equipment-card__category {
+    margin-bottom: 14px;
+
+    font-size: 7px;
+  }
+
+  .equipment-card__main h3 {
+    font-size: clamp(33px, 10vw, 46px);
+  }
+
+
+  /*
+     On mobile there is no hover.
+     Details are permanently visible at the
+     bottom of each card.
+  */
+
+  .equipment-card__details {
+    position: absolute;
+
+    transform: translateY(0);
+
+    opacity: 1;
+
+    padding: 22px;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(17, 17, 17, 0.75),
+        #111111 35%
+      );
+  }
+
+  .equipment-card__detail-header {
+    margin-bottom: 12px;
+
+    font-size: 6px;
+  }
+
+  .equipment-card__details p {
+    margin-bottom: 15px;
+
+    font-size: 9px;
+
+    line-height: 1.6;
+  }
+
+  .equipment-card__price {
+    padding: 11px 0;
+  }
+
+  .equipment-card__price span {
+    font-size: 6px;
+  }
+
+  .equipment-card__price strong {
+    font-size: 9px;
+  }
+
+  .equipment-card__availability {
+    margin-top: 10px;
+
+    font-size: 6px;
+  }
+
+
+  /* Instruction */
+
+  .equipment__instruction {
+    font-size: 6px;
+
+    margin-top: 20px;
+  }
+
+
+  /* CTA */
+
+  .equipment__cta {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 30px;
+
+    margin-top: 60px;
+
+    padding: 30px 25px;
+  }
+
+  .equipment__cta-content h3 {
+    font-size: 42px;
+  }
+
+  .equipment__cta-button {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+
+  /* Glows */
+
+  .equipment__glow--one {
+    width: 250px;
+    height: 250px;
+
+    right: -170px;
+  }
+
+  .equipment__glow--two {
+    width: 200px;
+    height: 200px;
+
+    left: -150px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .equipment__container {
+    padding: 0 16px;
+  }
+
+  .equipment__title {
+    font-size: 43px;
+  }
+
+  .equipment-card {
+    min-height: 390px;
+
+    padding: 20px;
+  }
+
+  .equipment-card__main h3 {
+    font-size: 31px;
+  }
+
+  .equipment-card__details {
+    padding: 20px;
+  }
+
+  .equipment__cta-content h3 {
+    font-size: 35px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .equipment *,
+  .equipment *::before,
+  .equipment *::after {
+    transition: none !important;
+  }
+
+}
+

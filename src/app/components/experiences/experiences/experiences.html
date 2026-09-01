@@ -1,0 +1,740 @@
+<section class="experiences" id="experiences">
+
+  <!-- =========================================
+       BACKGROUND DECORATION
+  ========================================== -->
+
+  <div class="experiences__glow experiences__glow--one"></div>
+  <div class="experiences__glow experiences__glow--two"></div>
+
+
+  <div class="experiences__container">
+
+
+    <!-- =========================================
+         SECTION HEADER
+    ========================================== -->
+
+    <header class="experiences__header">
+
+      <div class="experiences__eyebrow">
+
+        <span class="experiences__eyebrow-number">
+          04
+        </span>
+
+        <span class="experiences__eyebrow-line"></span>
+
+        <span>
+          OUR EXPERIENCES
+        </span>
+
+      </div>
+
+
+      <div class="experiences__header-label">
+        MUD ENT. / EXPERIENCES
+      </div>
+
+    </header>
+
+
+    <!-- =========================================
+         INTRO
+    ========================================== -->
+
+    <div class="experiences__intro">
+
+      <div>
+
+        <h2 class="experiences__title">
+
+          <span>
+            MOMENTS
+          </span>
+
+          <span class="experiences__title-outline">
+            THAT MOVE.
+          </span>
+
+        </h2>
+
+      </div>
+
+
+      <div class="experiences__intro-content">
+
+        <p>
+          Every event tells a story. Explore some of the
+          moments we've created, from unforgettable parties
+          to sophisticated corporate experiences.
+        </p>
+
+
+        <div class="experiences__intro-meta">
+
+          <span>
+            EVENTS
+          </span>
+
+          <span class="experiences__meta-line"></span>
+
+          <span>
+            EXPERIENCES
+          </span>
+
+          <span class="experiences__meta-line"></span>
+
+          <span>
+            MEMORIES
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================================
+         EXPERIENCE TABS
+    ========================================== -->
+
+    <div class="experiences__tabs">
+
+      <button
+        type="button"
+        class="experiences__tab"
+        [class.experiences__tab--active]="activeTab === 'halloween'"
+        (click)="selectTab('halloween')"
+      >
+
+        <span class="experiences__tab-number">
+          01
+        </span>
+
+        <span class="experiences__tab-content">
+
+          <strong>
+            2021
+          </strong>
+
+          <small>
+            Halloween Party: Moods and Flavours
+          </small>
+
+        </span>
+
+        <span class="experiences__tab-arrow">
+          ↗
+        </span>
+
+      </button>
+
+
+      <button
+        type="button"
+        class="experiences__tab"
+        [class.experiences__tab--active]="activeTab === 'redcarpet'"
+        (click)="selectTab('redcarpet')"
+      >
+
+        <span class="experiences__tab-number">
+          02
+        </span>
+
+        <span class="experiences__tab-content">
+
+          <strong>
+            2022
+          </strong>
+
+          <small>
+            Red Carpet Affair: Fourways Business Park
+          </small>
+
+        </span>
+
+        <span class="experiences__tab-arrow">
+          ↗
+        </span>
+
+      </button>
+
+    </div>
+
+
+    <!-- =========================================
+         TAB 01
+    ========================================== -->
+
+    @if (activeTab === 'halloween') {
+
+      <div
+        class="experiences__gallery"
+        @galleryAnimation
+      >
+
+        <!-- Image 01 -->
+
+        <figure
+          class="experience-image experience-image--large"
+          (click)="openImage(
+            'assets/images/experiences/2021-halloween-01.jpg',
+            'Halloween Party: Moods and Flavours'
+          )"
+        >
+
+          <img
+            src="assets/images/experiences/2021-halloween-01.jpg"
+            alt="MUD Entertainment Halloween Party 2021"
+            loading="lazy"
+          />
+
+          <figcaption>
+
+            <span>
+              01 / 06
+            </span>
+
+            <strong>
+              HALLOWEEN PARTY
+            </strong>
+
+          </figcaption>
+
+          <div class="experience-image__overlay">
+
+            <span>
+              VIEW
+            </span>
+
+            <span>
+              ↗
+            </span>
+
+          </div>
+
+        </figure>
+
+
+        <!-- Image 02 -->
+
+        <figure
+          class="experience-image experience-image--vertical"
+          (click)="openImage(
+            'assets/images/experiences/2021-halloween-02.jpg',
+            'Halloween Party 2021'
+          )"
+        >
+
+          <img
+            src="assets/images/experiences/2021-halloween-02.jpg"
+            alt="Halloween Party 2021"
+            loading="lazy"
+          />
+
+          <figcaption>
+
+            <span>
+              02 / 06
+            </span>
+
+            <strong>
+              THE NIGHT
+            </strong>
+
+          </figcaption>
+
+          <div class="experience-image__overlay">
+
+            <span>VIEW</span>
+
+            <span>↗</span>
+
+          </div>
+
+        </figure>
+
+
+        <!-- Image 03 -->
+
+        <figure
+          class="experience-image experience-image--wide"
+          (click)="openImage(
+            'assets/images/experiences/2021-halloween-03.jpg',
+            'Halloween Party 2021'
+          )"
+        >
+
+          <img
+            src="assets/images/experiences/2021-halloween-03.jpg"
+            alt="Halloween Party 2021"
+            loading="lazy"
+          />
+
+          <figcaption>
+
+            <span>
+              03 / 06
+            </span>
+
+            <strong>
+              ATMOSPHERE
+            </strong>
+
+          </figcaption>
+
+          <div class="experience-image__overlay">
+
+            <span>VIEW</span>
+
+            <span>↗</span>
+
+          </div>
+
+        </figure>
+
+
+        <!-- Image 04 -->
+
+        <figure
+          class="experience-image"
+          (click)="openImage(
+            'assets/images/experiences/2021-halloween-04.jpg',
+            'Halloween Party 2021'
+          )"
+        >
+
+          <img
+            src="assets/images/experiences/2021-halloween-04.jpg"
+            alt="Halloween Party 2021"
+            loading="lazy"
+          />
+
+          <figcaption>
+
+            <span>
+              04 / 06
+            </span>
+
+            <strong>
+              ENERGY
+            </strong>
+
+          </figcaption>
+
+          <div class="experience-image__overlay">
+
+            <span>VIEW</span>
+
+            <span>↗</span>
+
+          </div>
+
+        </figure>
+
+
+        <!-- Image 05 -->
+
+        <figure
+          class="experience-image"
+          (click)="openImage(
+            'assets/images/experiences/2021-halloween-05.jpg',
+            'Halloween Party 2021'
+          )"
+        >
+
+          <img
+            src="assets/images/experiences/2021-halloween-05.jpg"
+            alt="Halloween Party 2021"
+            loading="lazy"
+          />
+
+          <figcaption>
+
+            <span>
+              05 / 06
+            </span>
+
+            <strong>
+              THE PEOPLE
+            </strong>
+
+          </figcaption>
+
+          <div class="experience-image__overlay">
+
+            <span>VIEW</span>
+
+            <span>↗</span>
+
+          </div>
+
+        </figure>
+
+
+        <!-- Image 06 -->
+
+        <figure
+          class="experience-image experience-image--wide"
+          (click)="openImage(
+            'assets/images/experiences/2021-halloween-06.jpg',
+            'Halloween Party 2021'
+          )"
+        >
+
+          <img
+            src="assets/images/experiences/2021-halloween-06.jpg"
+            alt="Halloween Party 2021"
+            loading="lazy"
+          />
+
+          <figcaption>
+
+            <span>
+              06 / 06
+            </span>
+
+            <strong>
+              MEMORIES
+            </strong>
+
+          </figcaption>
+
+          <div class="experience-image__overlay">
+
+            <span>VIEW</span>
+
+            <span>↗</span>
+
+          </div>
+
+        </figure>
+
+      </div>
+
+    }
+
+
+    <!-- =========================================
+         TAB 02
+    ========================================== -->
+
+    @if (activeTab === 'redcarpet') {
+
+      <div
+        class="experiences__gallery"
+        @galleryAnimation
+      >
+
+        <!-- Image 01 -->
+
+        <figure
+          class="experience-image experience-image--large"
+          (click)="openImage(
+            'assets/images/experiences/2022-red-carpet-01.jpg',
+            'Red Carpet Affair 2022'
+          )"
+        >
+
+          <img
+            src="assets/images/experiences/2022-red-carpet-01.jpg"
+            alt="MUD Entertainment Red Carpet Affair 2022"
+            loading="lazy"
+          />
+
+          <figcaption>
+
+            <span>
+              01 / 06
+            </span>
+
+            <strong>
+              RED CARPET AFFAIR
+            </strong>
+
+          </figcaption>
+
+          <div class="experience-image__overlay">
+
+            <span>VIEW</span>
+
+            <span>↗</span>
+
+          </div>
+
+        </figure>
+
+
+        <!-- Image 02 -->
+
+        <figure
+          class="experience-image experience-image--vertical"
+          (click)="openImage(
+            'assets/images/experiences/2022-red-carpet-02.jpg',
+            'Red Carpet Affair 2022'
+          )"
+        >
+
+          <img
+            src="assets/images/experiences/2022-red-carpet-02.jpg"
+            alt="Red Carpet Affair 2022"
+            loading="lazy"
+          />
+
+          <figcaption>
+
+            <span>
+              02 / 06
+            </span>
+
+            <strong>
+              ARRIVALS
+            </strong>
+
+          </figcaption>
+
+          <div class="experience-image__overlay">
+
+            <span>VIEW</span>
+
+            <span>↗</span>
+
+          </div>
+
+        </figure>
+
+
+        <!-- Image 03 -->
+
+        <figure
+          class="experience-image experience-image--wide"
+          (click)="openImage(
+            'assets/images/experiences/2022-red-carpet-03.jpg',
+            'Red Carpet Affair 2022'
+          )"
+        >
+
+          <img
+            src="assets/images/experiences/2022-red-carpet-03.jpg"
+            alt="Red Carpet Affair 2022"
+            loading="lazy"
+          />
+
+          <figcaption>
+
+            <span>
+              03 / 06
+            </span>
+
+            <strong>
+              THE EXPERIENCE
+            </strong>
+
+          </figcaption>
+
+          <div class="experience-image__overlay">
+
+            <span>VIEW</span>
+
+            <span>↗</span>
+
+          </div>
+
+        </figure>
+
+
+        <!-- Image 04 -->
+
+        <figure
+          class="experience-image"
+          (click)="openImage(
+            'assets/images/experiences/2022-red-carpet-04.jpg',
+            'Red Carpet Affair 2022'
+          )"
+        >
+
+          <img
+            src="assets/images/experiences/2022-red-carpet-04.jpg"
+            alt="Red Carpet Affair 2022"
+            loading="lazy"
+          />
+
+          <figcaption>
+
+            <span>
+              04 / 06
+            </span>
+
+            <strong>
+              STYLE
+            </strong>
+
+          </figcaption>
+
+          <div class="experience-image__overlay">
+
+            <span>VIEW</span>
+
+            <span>↗</span>
+
+          </div>
+
+        </figure>
+
+
+        <!-- Image 05 -->
+
+        <figure
+          class="experience-image"
+          (click)="openImage(
+            'assets/images/experiences/2022-red-carpet-05.jpg',
+            'Red Carpet Affair 2022'
+          )"
+        >
+
+          <img
+            src="assets/images/experiences/2022-red-carpet-05.jpg"
+            alt="Red Carpet Affair 2022"
+            loading="lazy"
+          />
+
+          <figcaption>
+
+            <span>
+              05 / 06
+            </span>
+
+            <strong>
+              CONNECTION
+            </strong>
+
+          </figcaption>
+
+          <div class="experience-image__overlay">
+
+            <span>VIEW</span>
+
+            <span>↗</span>
+
+          </div>
+
+        </figure>
+
+
+        <!-- Image 06 -->
+
+        <figure
+          class="experience-image experience-image--wide"
+          (click)="openImage(
+            'assets/images/experiences/2022-red-carpet-06.jpg',
+            'Red Carpet Affair 2022'
+          )"
+        >
+
+          <img
+            src="assets/images/experiences/2022-red-carpet-06.jpg"
+            alt="Red Carpet Affair 2022"
+            loading="lazy"
+          />
+
+          <figcaption>
+
+            <span>
+              06 / 06
+            </span>
+
+            <strong>
+              MEMORIES
+            </strong>
+
+          </figcaption>
+
+          <div class="experience-image__overlay">
+
+            <span>VIEW</span>
+
+            <span>↗</span>
+
+          </div>
+
+        </figure>
+
+      </div>
+
+    }
+
+
+    <!-- =========================================
+         BOTTOM STATEMENT
+    ========================================== -->
+
+    <div class="experiences__statement">
+
+      <span class="experiences__statement-line"></span>
+
+      <p>
+        Creating experiences.
+        <strong>Connecting people.</strong>
+        Making you dance.
+      </p>
+
+      <span class="experiences__statement-line"></span>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================
+       IMAGE LIGHTBOX
+  ========================================== -->
+
+  @if (selectedImage) {
+
+    <div
+      class="experience-lightbox"
+      (click)="closeImage()"
+    >
+
+      <button
+        type="button"
+        class="experience-lightbox__close"
+        aria-label="Close image"
+        (click)="closeImage()"
+      >
+        ×
+      </button>
+
+
+      <div
+        class="experience-lightbox__content"
+        (click)="$event.stopPropagation()"
+      >
+
+        <img
+          [src]="selectedImage"
+          [alt]="selectedImageTitle"
+        />
+
+        <div class="experience-lightbox__caption">
+
+          <span>
+            MUD ENT. / EXPERIENCES
+          </span>
+
+          <strong>
+            {{ selectedImageTitle }}
+          </strong>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  }
+
+</section>
+
