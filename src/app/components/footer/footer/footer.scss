@@ -662,3 +662,24 @@ transition: none !important;
 }
 
 }
+
+.footer__column--find-us {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__logo {
+  margin-top: auto;
+  padding-top: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.footer__logo img {
+  width: 150px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}

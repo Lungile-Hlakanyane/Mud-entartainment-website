@@ -13,6 +13,38 @@
   align-items: center;
 }
 
+.navbar__logo {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  transition: opacity 0.3s ease;
+}
+
+.navbar__logo:hover {
+  opacity: 0.8;
+}
+
+.navbar__logo-main {
+  font-size: 1.65rem;
+  font-weight: 900;
+  letter-spacing: -0.08em;
+  line-height: 1;
+
+  position: relative;
+}
+
+.navbar__logo-sub {
+  font-size: 0.52rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  line-height: 1;
+  opacity: 0.75;
+  transform: translateY(2px);
+}
+
 
 /* =========================================================
    BACKGROUND
