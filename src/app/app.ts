@@ -7,10 +7,12 @@ import { Equipment } from './components/equipment/equipment/equipment';
 import { Experiences } from './components/experiences/experiences/experiences';
 import { ContactUs } from './components/contact-us/contact-us/contact-us';
 import { Footer } from './components/footer/footer/footer';
+import { PackagaesComponent } from './components/packages/packagaes-component/packagaes-component';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Hero, About, Services, Equipment, Experiences, ContactUs, Footer],
+  imports: [RouterOutlet, Hero, About, Services, Equipment, Experiences, ContactUs, Footer, PackagaesComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
