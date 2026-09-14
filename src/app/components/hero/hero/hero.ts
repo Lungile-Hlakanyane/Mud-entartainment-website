@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { FormsModule, FormBuilder,Validators, FormGroup } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { QuoteFormData } from '../../../models/QuoteFormData.model';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   imports: [FormsModule],
@@ -10,8 +11,12 @@ import { QuoteFormData } from '../../../models/QuoteFormData.model';
 })
 export class Hero {
 
+ private readonly formspreeUrl = 'https://formspree.io/f/xwlkdyyp';
+
  quoteModalOpen = false;
  isSubmitting = false;
+
+ constructor(private http:HttpClient){}
 
  quoteFormData: QuoteFormData = {
  name: '',
@@ -93,24 +98,53 @@ return this.quoteFormData.services.includes(service);
 
 
 submitQuote(): void {
-this.isSubmitting = true;
-
-console.log(
-  'M.U.D Entertainment Quote Request:',
-  this.quoteFormData
-);
-
-
-setTimeout(() => {
-  this.isSubmitting = false;
-  alert(
-    'Thank you! Your quote request has been received. The M.U.D Entertainment team will be in touch with you shortly.'
-  );
-  this.resetQuoteForm();
-  this.closeQuoteModal();
-
-}, 1000);
-}
+    if (this.isSubmitting) {
+      return;
+    }
+    this.isSubmitting = true;
+    const formData = {
+      name: this.quoteFormData.name,
+      email: this.quoteFormData.email,
+      phone: this.quoteFormData.phone,
+      company: this.quoteFormData.company,
+      eventType: this.quoteFormData.eventType,
+      eventDate: this.quoteFormData.eventDate,
+      venue: this.quoteFormData.venue,
+      guests: this.quoteFormData.guests,
+      services: this.quoteFormData.services.join(', '),
+      message: this.quoteFormData.message,
+      subject:
+        `M.U.D Entertainment Quote Request - ${this.quoteFormData.name}`
+    };
+    this.http.post(
+      this.formspreeUrl,
+      formData,
+      {
+        headers: {
+          Accept: 'application/json'
+        }
+      }
+    ).subscribe({
+      next: () => {
+        this.isSubmitting = false;
+        alert(
+          'Thank you! Your quote request has been sent successfully. The M.U.D Entertainment team will be in touch with you shortly.'
+        );
+        this.resetQuoteForm();
+        this.closeQuoteModal();
+      },
+      error: (error) => {
+        console.error(
+          'Formspree submission error:',
+          error
+        );
+        this.isSubmitting = false;
+        alert(
+          'Sorry, we could not send your quote request. Please try again or contact M.U.D Entertainment directly.'
+       );
+      }
+    });
+  }
 
 
 resetQuoteForm(): void {
